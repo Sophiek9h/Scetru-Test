@@ -177,10 +177,6 @@ button:hover {
     border-radius: 10px;
 }
 
-#activity-form{
-    padding-top: 20px;
-}
-
 
 /* Media Query for screen sizes 700px and below */
 @media (max-width: 800px) {
