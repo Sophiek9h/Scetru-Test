@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,                            // Easier support for CommonJS modules
+    "forceConsistentCasingInFileNames": true,           // Ensure consistent casing in imports
+
+    /* Type Checking */
+    "strict": true,                                     // Enable all strict type-checking options
+
+    /* Module Resolution and Output */
+    "skipLibCheck": true,                               // Skip type checking .d.ts files
+    "outDir": "./dist",                                 // Directory where compiled JS will go
+    "rootDir": "./src",                                 // Directory where your TS files are located
+    "target": "es5",                                    // Target ECMAScript version (for wider browser compatibility)
+    "module": "commonjs"                                // CommonJS module system
+  }
+}

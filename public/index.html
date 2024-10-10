@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Sign Up</h1>
+            <p>Let's start your journey with Sophia's Scetru Test.</p>
+            <form id="signup-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="sophieeee" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="sophieeee@gmail.com" required>
+
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="mysecretpassword" required>
+                    <span class="toggle-password">👁️</span>
+                </div>
+
+                <button type="submit">Sign Up</button>
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+                <button type="button" class="google-signup">Sign Up with Google</button>
+
+                <p>Already have an account? <a href="loginPage.html">Log in</a></p>
+            </form>
+        </div>
+        <div class="image-container">
+            <img src="/images/welcome.svg" alt="Student Image">
+        </div>
+    </div>
+
+    <script>
+        const togglePassword = document.querySelector('.toggle-password');
+        const passwordInput = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.textContent = this.textContent === '👁️' ? '🙈' : '👁️';
+        });
+    </script>
+
+    <script src="/dist/signup.js" type="module"></script>
+</body>
+</html>

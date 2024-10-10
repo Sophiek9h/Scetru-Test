@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-home">
+        <!-- Left Side: User Activity Section -->
+
+        <div class="left-column">
+            <h1 id="welcome-message">Welcome to the Dashboard</h1>
+
+            
+            <!-- Quiz Form -->
+            <form id="activity-form">
+                <label for="favorite-color">What is your favorite color?</label><br>
+                <input type="text" id="favorite-color" name="color" placeholder="Enter your favorite color"><br><br>
+
+                <label>Choose your favorite season:</label><br>
+                <input type="radio" id="spring" name="season" value="spring">
+                <label for="spring">Spring</label><br>
+                <input type="radio" id="summer" name="season" value="summer">
+                <label for="summer">Summer</label><br>
+                <input type="radio" id="fall" name="season" value="fall">
+                <label for="fall">Fall</label><br>
+                <input type="radio" id="winter" name="season" value="winter">
+                <label for="winter">Winter</label><br><br>
+
+                <button type="submit">Submit Activity</button>
+            </form>
+
+            <button id="signout">Sign out</button>
+        </div>
+
+        <!-- Right Side: Instructions Section -->
+        <div class="right-column">
+            <h2>Instructions</h2>
+            <p>Your activity is being tracked on this page. Please fill out the form on the left, and your actions will be logged in the console for each input.</p>
+        </div>
+    </div>
+
+    <!-- Reference the logout script -->
+    <script src="/dist/home.js"></script>
+</body>
+</html>

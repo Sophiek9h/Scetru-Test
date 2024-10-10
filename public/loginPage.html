@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Login</h1>
+            <p>Welcome back! Please enter your credentials to continue.</p>
+            <!-- Add id to form -->
+            <form id="login-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="sophieeee" required>
+
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="mysecretpassword" required>
+                    <span class="toggle-password">👁️</span>
+                </div>
+
+                <button type="submit">Login</button>
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+                <button type="button" class="google-login">Login with Google</button>
+
+                <p>Don't have an account? <a href="index.html">Sign Up</a></p>
+            </form>
+        </div>
+        <div class="image-container">
+            <img src="/images/login.svg" alt="Welcome Back Image">
+        </div>
+    </div>
+
+    <script>
+        const togglePassword = document.querySelector('.toggle-password');
+        const passwordInput = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.textContent = this.textContent === '👁️' ? '🙈' : '👁️';
+        });
+    </script>
+
+    <!-- Reference the compiled JavaScript file -->
+    <script src="/dist/login.js" type="module"></script>
+</body>
+</html>

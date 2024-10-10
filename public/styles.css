@@ -1,0 +1,223 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Login and signup styles */
+
+.form-container {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4a4ebf;
+}
+
+p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.password-reqs {
+    list-style: none;
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+    color: #777;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: #4a4ebf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #393fa3;
+}
+
+.google-signup, .google-login {
+    background-color: white;
+    color: #444;
+    border: 1px solid #ccc;
+}
+
+.google-signup:hover, .google-login:hover {
+    background-color: #f7f7f7;
+}
+
+.divider {
+    text-align: center;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.divider span {
+    background-color: white;
+    padding: 0 1rem;
+    color: #777;
+}
+
+.divider:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.form-container a {
+    color: #4a4ebf;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+.image-container {
+    flex: 1;
+    background-color: #fff7e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+}
+
+.image-container img {
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+
+/* Home page styles start here */
+.container-home {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    gap: 20px;
+    padding: 40px;
+}
+
+.left-column {
+    flex: 2;
+}
+
+.right-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+#activity-form{
+    padding-top: 20px;
+}
+
+
+/* Media Query for screen sizes 700px and below */
+@media (max-width: 800px) {
+    .image-container {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+        flex-direction: column;
+        border-radius: 10px; 
+    }
+
+    .container-home {
+        flex-direction: column;
+        width: 95%;
+        padding: 20px;
+    }
+
+    .left-column {
+        width: 100%;
+    }
+
+    .right-column{
+        display: none;
+    }
+
+    .left-column {
+        margin-bottom: 20px;
+    }
+
+    #activity-form {
+        padding-top: 10px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
